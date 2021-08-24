@@ -10,7 +10,9 @@
 </div>
 
 ## Flow
+<div align="center">
 ![flow](https://i.imgur.com/SbdhOIo.png)
+  </div>
 
 ## Dependencies:
 ```
