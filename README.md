@@ -11,7 +11,7 @@
 
 ## Flow
 <div align="center">
-  ![flow](https://i.imgur.com/SbdhOIo.png)
+  <img src="https://i.imgur.com/SbdhOIo.png">
 </div>
 
 ## Dependencies:
