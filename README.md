@@ -11,8 +11,8 @@
 
 ## Flow
 <div align="center">
-![flow](https://i.imgur.com/SbdhOIo.png)
-  </div>
+  ![flow](https://i.imgur.com/SbdhOIo.png)
+</div>
 
 ## Dependencies:
 ```
