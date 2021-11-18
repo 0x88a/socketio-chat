@@ -3,8 +3,8 @@
 
 <head>
 	<title>Private Chats!</title>
-	<script src="/v3/js/jquery.js"></script>
-	<script src="/js/socket.io.js"></script>
+	<script src="../js/jquery.js"></script>
+	<script src="../js/socket.io.js"></script>
 </head>
 
 <body class="no-overflow">
@@ -17,8 +17,8 @@
 
 </html>
 <script>
-	var id = "123123"; // This should be the ID of the chat you want to join. Can be dynamic etc
-	var socket = io("https://yourapp.herokuapp.com");
+	var id = window.location.search.substr(1) // https://example.com?room - our room would be "room", you can change this to anything
+	var socket = io("https://shoutbox-nullus.herokuapp.com")
 
 	$('#privateMessageNew').click(function(ev) {
 		$("#privateMessageModal").modal("show");
@@ -28,29 +28,29 @@
 		});
 
 		$("#sendMessage").click(function() {
-			$.ajax({
-				url: '/web_server/privatemessage.php',
-				type: 'POST',
-				data: {
-					message: $("#msgInput").val(),
-					user: id
-				},
-				dataType: 'json',
-				success: function(response) {
-					if (response.error == null) {
+			// $.ajax({
+				// url: '/web_server/privatemessage.php',
+				// type: 'POST',
+				// data: {
+					// message: $("#msgInput").val(),
+					// user: id
+				// },
+				// dataType: 'json',
+				// success: function(response) {
+					// if (response.error == null) {
 						socket.emit('privatemsg', {
 							id: id,
-							message: response.message
+							message: $("#msgInput").val()
 						});
-					} else if (response.error == "Cleared") {
-						socket.emit('privatemsgclear', {
-							id: id
-						});
-					} else {
-						// Give some error "response.error"
-					}
-				}
-			});
+					// } else if (response.error == "Cleared") {
+						// socket.emit('privatemsgclear', {
+							// id: id
+						// });
+					// } else {
+						// // Give some error "response.error"
+					// }
+				// }
+			// });
 		});
 
 		socket.on('privatemsgnew', function(data) {

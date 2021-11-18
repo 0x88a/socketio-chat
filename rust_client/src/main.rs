@@ -20,7 +20,7 @@ fn main() {
     let mut username = hostname().unwrap();
 
     // Here you want to define your socket.io server; I have mine hosted on Heroku, you can have yours wherever :)
-    let mut socket = SocketBuilder::new("http://localhost:3000")
+    let mut socket = SocketBuilder::new("https://your.herokuapp.com")
         .on("message", callback)
         .on("error", |err, _| eprintln!("Error: {:#?}", err))
         .connect()

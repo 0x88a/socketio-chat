@@ -3,10 +3,11 @@ const app = require('express')();
 const http = require('http').Server(app);
 const mysql = require('mysql');
 const io = require('socket.io')(http, {
-	allowEIO3: true,
+allowUpgrades: false,
+	transports: ["polling"],
 	cors: {
-		origin: "https://example.com" // Only permit requests from your website.
-	}
+		origin: "https://example.com"
+	},
 });
 
 const port = process.env.PORT || 3000; // For Heroku Hosting (you can change it to a static port)
