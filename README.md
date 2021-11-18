@@ -3,7 +3,8 @@
   <p>
     <strong>The purpouse of this demonstration is to allow users to enter messages in either a public or private chat. These messages are then 
     added to a MySQL Database aswell as being sent off to a socket.io server; the server then checks the data being sent against the MySQL Database.
-    A fairly easy way of preventing malicious messages being sent manually.</strong>
+    A fairly easy way of preventing malicious messages being sent manually.</strong> <br>
+    <a href="https://jefff000.github.io/socketio-chat/web_client/shoutbox.html"> Deployed Live @ jefff000.github.io </a>
   </p>
   <p>
   </p>
