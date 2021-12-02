@@ -10,11 +10,6 @@
   </p>
 </div>
 
-## Flow
-<div align="center">
-  <img src="https://i.imgur.com/SbdhOIo.png">
-</div>
-
 ## Dependencies:
 ```
 [dependencies]
